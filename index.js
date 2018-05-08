@@ -20,7 +20,7 @@ function authenticate(internalUserIdentifier = 'username123', identityPhrase = '
     try {
       const recovered = sigUtil.recoverTypedSignature(rtsParam);
       if (recovered === from ) {
-        callback({success: {internalUserIdentifier: internalUserIdentifier, ethereumAddress: ethereumAddress}});
+        callback({success: {internalUserIdentifier: internalUserIdentifier, recovered: recovered, identityPhrase: identityPhrase, ethereumAddress: ethereumAddress}});
       } else {
         callback({error: {message: "Invalid Signature", invalidData: recovered, internalUserIdentifier: internalUserIdentifier, ethereumAddress: ethereumAddress}});
       }
