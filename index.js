@@ -11,7 +11,7 @@ function authenticate(internalUserIdentifier = 'username123', identityPhrase = '
     //inconsistencies in Metamask address display + the checksumming of sigUtil.. 
     //sigutil will recover message returning address as lowercase
 
-    if (sig.length < 10) {
+    if (signedData.length < 10) {
       return {success: null, error: {message: "Invalid signature length", internalUserIdentifier: internalUserIdentifier, ethereumAddress: ethereumAddress}};
     }
     

@@ -1,0 +1,10 @@
+{
+  "name": "eth-auth-example",
+  "main": "server.js",
+  "author": "Quantum Productions, LLC",
+  "license": "MIT",
+  "dependencies": {
+    "eth-auth": "0.0.1"
+    "express"
+  }
+}

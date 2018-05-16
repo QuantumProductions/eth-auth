@@ -1,0 +1,40 @@
+<html>
+<script>
+function signToken() {
+  let web3 = window.web3;
+  let method = 'eth_signTypedData';
+  let from = web3.eth.accounts[0];
+  //assuming you already have token from server
+  let params = [[{ type: 'string', name: 'eth-auth', value: 'gibberishToken' }], from];
+
+  window.web3.currentProvider.sendAsync({
+    method: method,
+    params: params,
+    from: from
+  }, function (error, result) {
+    if (error) {
+      console.log("Error getting signature" + error);
+      alert("Error getting signature" + error);
+      return;
+    }
+    let data = result.result;
+    console.log('PERSONAL SIGNED:' + data);
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", "http://localhost:8000/accessContent?address=" + from + "&signature=" + data, false); 
+    xmlHttp.send(null);
+    let response = xmlHttp.responseText;
+    console.log("response" + response);
+    console.log(JSON.parse(response));
+  });    
+}
+</script>
+
+<body bgColor="#00000" text="#FFFFFF">
+Metamask is required to be installed + unlocked.
+<p>
+<button onClick="signToken()">Sign Token</button>
+<p>
+Depending on your browser / if Metamask is behaving, you may have to click the Metamask fox icon to see the signature prompt.
+<p>
+You'll likely need CORS Everywhere (Firefox plugin) or your another solution to cross-origin requsets in development.
+</body>
