@@ -1,3 +1,4 @@
+```
 //Validate a user has control of their Ethereum address by decoding their signing of an authentication token.
 
 const ethAuth = require('eth-auth');
@@ -21,3 +22,4 @@ app.get('/accessContent', function(req, res) {
     res.json({error: error.message});
   }
 });
+```
