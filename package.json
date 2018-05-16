@@ -1,10 +1,10 @@
 {
   "name": "eth-auth",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Validate authentication credentials from an Ethereum address. Use to associate an Ethereum address with your user database.",
   "main": "index.js",
   "author": "Quantum Productions, LLC",
-  "license": "TBD",
+  "license": "MIT",
   "dependencies": {
     "bignumber.js": "5.0.0",
     "eth-sig-util": "1.4.2",

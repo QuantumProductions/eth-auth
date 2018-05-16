@@ -1,0 +1,1 @@
+const ethAuth = require('eth-auth');
