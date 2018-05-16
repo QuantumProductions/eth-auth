@@ -6,7 +6,6 @@ function authenticate(internalUserIdentifier = 'username123', identityPhrase = '
     ethereumAddress = '0xWhoTheyClaimToBe', signedData = 'data-signed-by-users-wallet-expected-to-match-user-token') {
 
     let statement = [{ type: 'string', name: 'eth-auth', value: identityPhrase}];
-    console.log("statement" + JSON.stringify(statement));
     let from = ethereumAddress.toLowerCase();
     //inconsistencies in Metamask address display + the checksumming of sigUtil.. 
     //sigutil will recover message returning address as lowercase
@@ -19,7 +18,6 @@ function authenticate(internalUserIdentifier = 'username123', identityPhrase = '
 
     try {
       const recovered = sigUtil.recoverTypedSignature(rtsParam);
-      console.log("Recovered " + recovered);
       if (recovered === from ) {
         return {error: null, success: {internalUserIdentifier: internalUserIdentifier, recovered: recovered, identityPhrase: identityPhrase, ethereumAddress: ethereumAddress}};
       } else {

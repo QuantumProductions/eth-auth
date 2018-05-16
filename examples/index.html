@@ -22,9 +22,14 @@ function signToken() {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "http://localhost:8000/accessContent?address=" + from + "&signature=" + data, false); 
     xmlHttp.send(null);
-    let response = xmlHttp.responseText;
-    console.log("response" + response);
-    console.log(JSON.parse(response));
+    let response = JSON.parse(xmlHttp.responseText);
+    if (response.content) {
+      alert("Authorized content: "  + response.content);
+      console.log(response.content);
+    } else {
+      alert("Error" + response.error);
+      console.log(response.error);
+    }
   });    
 }
 </script>

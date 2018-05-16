@@ -16,9 +16,6 @@ app.get('/', function(req,res) {
 });
 
 app.get('/accessContent', function(req, res) {
-  console.log(req.query);
-  console.log(Object.keys(req.query));
-  console.log(JSON.stringify(req.query));
   let signature = req.query.signature;
   let address = req.query.address;
   let userId = 123;
