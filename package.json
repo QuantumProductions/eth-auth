@@ -5,13 +5,10 @@
   "main": "index.js",
   "author": "Quantum Productions, LLC",
   "license": "TBD",
-  "depencies": {
+  "dependencies": {
     "bignumber.js": "5.0.0",
     "eth-sig-util": "1.4.2",
-    "npm": "^5.8.0",
-    "web3": "1.0.0-beta.27"
-  },
-  "dependencies": {
-    "npm": "^6.0.0"
+    "npm": "^6.0.0",
+    "web3": "1.0.0-beta.34"
   }
 }
