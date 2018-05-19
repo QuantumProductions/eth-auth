@@ -20,6 +20,10 @@ app.get('/accessContent', function(req, res) {
   let address = req.query.address;
   let userId = 123;
   let token = "gibberishToken";
+  //It makes sense to generate a new token per session
+  //Perhaps through a websocket API. This example is just to demonstrate the signature decoding.
+  //ethAuth library assumes the name of the message is eth-auth and the token value is up to you.
+  //Look inside eth-auth's index.js if you want to customize the name of the message being signed.
 
   let {error, success} = ethAuth(userId, token, address, signature);
   if (success) {

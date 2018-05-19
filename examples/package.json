@@ -4,7 +4,7 @@
   "author": "Quantum Productions, LLC",
   "license": "MIT",
   "dependencies": {
-    "eth-auth": "0.0.2",
+    "eth-auth": "1.0.4",
     "express": "4.16.2"
   }
 }

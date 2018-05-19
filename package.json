@@ -1,6 +1,6 @@
 {
   "name": "eth-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Validate authentication credentials from an Ethereum address. Use to associate an Ethereum address with your user database.",
   "main": "index.js",
   "author": "Quantum Productions, LLC",
@@ -12,10 +12,16 @@
     "web3": "1.0.0-beta.34"
   },
   "devDonationAddress": "0x2c3b0F6E40d61FEb9dEF9DEb1811ea66485B83E7",
-  "keywords" : ["javascript", "ethereum", "web3", "authentication", "metamask"],
+  "keywords": [
+    "javascript",
+    "ethereum",
+    "web3",
+    "authentication",
+    "metamask"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:QuantumProductions/eth-auth.git"
-    },
+  },
   "homepage": "https://github.com/quantumproductions/eth-auth"
 }
